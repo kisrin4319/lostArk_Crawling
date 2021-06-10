@@ -22,7 +22,7 @@
 <script type="text/javascript">
     $("#craw_submit").click(function(){
         $.ajax({
-            url :"/lostArk_Crawling/loarc/Character.ajax",
+            url :"loarc/Character.ajax",
             data :{
                 user_id : $("#craw_id").val(),
             },
