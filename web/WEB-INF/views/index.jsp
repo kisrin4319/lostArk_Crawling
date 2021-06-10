@@ -22,15 +22,15 @@
 <script type="text/javascript">
     $("#craw_submit").click(function(){
         $.ajax({
-            url :"/loarc/Character.ajax",
+            url :"/lostArk_Crawling/loarc/Character.ajax",
             data :{
                 user_id : $("#craw_id").val(),
             },
             dataType : "json",
             type : "post",
             success:function(data){
-                console.log(data.Profile-info);
-                $(".content_craw").append("<tr><th>"+data.Profile-info+"</th></tr>");
+                console.log(data.Profileinfo);
+                $(".content_craw").append("<tr><th>"+data.Profileinfo+"</th></tr>");
 
             }
         })

@@ -3,6 +3,8 @@ package controller;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,26 +16,31 @@ import java.util.Map;
 
 @Controller
 public class CharacterInfoController {
+	
+	private static final Logger logger = LoggerFactory.getLogger(CharacterInfoController.class);
 
     @RequestMapping(value = "/")
     public String main() {
+    	System.out.println("test");
         return "index";
     }
 
     @RequestMapping(value = "loarc/Character.ajax")
     @ResponseBody
     public Map<String, Object> Character_select(String user_id, HttpServletRequest req, HttpServletResponse res) throws Exception {
-        // 검색한 아이디명으로 조회
+        // 寃��깋�븳 �븘�씠�뵒紐낆?��濡� 議고?��
         String url = "https://lostark.game.onstove.com/Profile/Character/" + user_id;
         Document doc = Jsoup.connect(url).get();
 
         Elements element = doc.select("div.profile-character");
+        
+        String serializeElement = element.toString();
 
-        System.out.println("TEST : " + element);
+        System.out.println("TEST : " + serializeElement);
 
         Map<String, Object> resultMap = new HashMap<>();
 
-        resultMap.put("Profile-info", element);
+        resultMap.put("Profileinfo", serializeElement);
         return resultMap;
     }
 }
