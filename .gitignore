@@ -2,3 +2,5 @@
 /.classpath
 /.taget
 /.settings
+/target/
+/.gitignore

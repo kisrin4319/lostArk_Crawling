@@ -33,14 +33,18 @@ public class CharacterInfoController {
         Document doc = Jsoup.connect(url).get();
 
         Elements element = doc.select("div.profile-character");
+        // 캐릭터 이미지만 가져올 수 있는 selector
+        Elements charaterImage = doc.select("#profile-equipment .profile-equipment__character");
         
         String serializeElement = element.toString();
+        String serializeCharaterImage = charaterImage.toString();
 
         System.out.println("TEST : " + serializeElement);
 
         Map<String, Object> resultMap = new HashMap<>();
 
         resultMap.put("Profileinfo", serializeElement);
+        resultMap.put("serializeCharaterImage", serializeCharaterImage);
         return resultMap;
     }
 }
