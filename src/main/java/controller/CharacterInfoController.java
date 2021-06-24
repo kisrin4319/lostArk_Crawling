@@ -28,7 +28,7 @@ public class CharacterInfoController {
     @RequestMapping(value = "loarc/Character.ajax")
     @ResponseBody
     public Map<String, Object> Character_select(String user_id, HttpServletRequest req, HttpServletResponse res) throws Exception {
-        // 寃��깋�븳 �븘�씠�뵒紐낆?��濡� 議고?��
+        // 검색한 아이디명으로 조회
         String url = "https://lostark.game.onstove.com/Profile/Character/" + user_id;
         Document doc = Jsoup.connect(url).get();
 
