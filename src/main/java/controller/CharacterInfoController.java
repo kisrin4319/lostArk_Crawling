@@ -31,6 +31,7 @@ public class CharacterInfoController {
         // 검색한 아이디명으로 조회
         String url = "https://lostark.game.onstove.com/Profile/Character/" + user_id;
         Document doc = Jsoup.connect(url).get();
+        System.out.println(doc);
 
         Elements element = doc.select("div.profile-character");
         // 캐릭터 이미지만 가져올 수 있는 selector

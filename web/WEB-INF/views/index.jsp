@@ -1,54 +1,9 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <!-- Start Head -->
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>로아엇</title>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
-	<script src="https://cdn.rawgit.com/blowsie/Pure-JavaScript-HTML5-Parser/master/htmlparser.js"></script>
-	<link rel="stylesheet" href="resources/assets/css/style.min.css">
-	<link rel="stylesheet" href="resources/assets/css/modules.css">
-
-	<!-- Canonical URL usage -->
-	<link rel="canonical" href="https://aperitif.io/">
-
-	<!-- Facebook Open Graph -->
-	<meta property="og:url"                content="https://aperitif.io/" />
-	<meta property="og:title"              content="Aperitif | The web template generator" />
-	<meta property="og:description"        content="Aperitif is a rapid web template generation tool." />
-	<meta property="og:image"              content="https://aperitif.io/img/aperitif-facebook.png" />
-	<meta property="og:image:width"        content="1200" />
-	<meta property="og:image:height"       content="630" />
-
-	<!-- Twitter Cards -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@Aperitif">
-	<meta name="twitter:creator" content="@Aperitif">
-	<meta name="twitter:title" content="Aperitif - The web template generator">
-	<meta name="twitter:description" content="Aperitif is a rapid web template generation tool.">
-	<meta name="twitter:image" content="https://aperitif.io/img/aperitif-card.png">
-
-	<!-- Google Structured Data -->
-	<script type="application/ld+json">
-	{
-	"@context" : "http://schema.org",
-	"@type" : "SoftwareApplication",
-	"name" : "Aperitif",
-	"image" : "https://aperitif.io/img/aperitif-logo.svg",
-	"url" : "https://aperitif.io/",
-	"author" : {
-	  "@type" : "Person",
-	  "name" : "Octavector"
-	},
-	"datePublished" : "2017-MM-DD",
-	"applicationCategory" : "HTML"
-	}
-	</script>
-</head>
+<!-- include header.jsp -->
+<%@ include file="/WEB-INF/views/layout/header.jsp" %>
 <!-- End Head -->
 <script type="text/javascript">
 $(function() {
@@ -91,73 +46,7 @@ function doSearch() {
 </script>
 
 <body class="modern">
-
-<!--
-START MODULE AREA 1: Menu 1
--->
-<section class="MOD_MENU" data-theme="_bgp">
-
-<span>
-	<input type="button" id="craw_submit" name="craw_submit" class="btn btn-warning" value="조회" style="float: right; width: 65px;"/>
-	<input type="text" id="craw_id" name="craw_id" class="form-control" placeholder="ID 입력" style="width:300px; border: none; background: #ffffff; float: right;"/>
-</span>
-  <div data-layout="_r" class="nopadding">
-    <nav class="MOD_MENU_Nav">
-      <p class="MOD_MENU_Title">Menu</p>
-      <svg class="MOD_MENU_Button" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
-        <rect width="30" height="6"/>
-        <rect y="24" width="30" height="6"/>
-        <rect y="12" width="30" height="6"/>
-      </svg>
-      <ul class="AP_Menu_List">
-        <li>
-          <a href="#" data-theme="_bgp">Menu Item</a>
-        </li>
-        <li>
-          <a href="#" data-theme="_bgp">Menu Item</a>
-          <ul>
-            <li>
-              <a href="#" data-theme="_bgpd">Sub-Menu Item</a>
-            </li>
-            <li>
-              <a href="#" data-theme="_bgpd">Sub-Menu Item long title</a>
-            </li>
-            <li>
-              <a href="#" data-theme="_bgpd">Sub-Menu Item</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#" data-theme="_bgp">Menu Item</a>
-        </li>
-        <li>
-          <a href="#" data-theme="_bgp">Menu Item</a>
-        </li>
-        <li>
-          <a href="#" data-theme="_bgp">Menu Item</a>
-        </li>
-        <li>
-          <a href="#" data-theme="_bgp">Menu Item</a>
-          <ul>
-            <li>
-              <a href="#" data-theme="_bgpd">Sub-Menu Item</a>
-            </li>
-            <li>
-              <a href="#" data-theme="_bgpd">Sub-Menu Item long title</a>
-            </li>
-            <li>
-              <a href="#" data-theme="_bgpd">Sub-Menu Item</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</section>
-<!--
-END MODULE AREA 1: Menu 1
--->
-
+<%@ include file="/WEB-INF/views/layout/bodyHeader.jsp" %>
 <!--
 START MODULE AREA 2: Hero 1
 -->
